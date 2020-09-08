@@ -11,8 +11,7 @@ async function getJoke() {
   );
 
   const joke = await jokePromise.json();
-
-  console.log(joke);
+  setupDiv.innerHTML = joke[0].setup;
 }
 
 getJoke();
