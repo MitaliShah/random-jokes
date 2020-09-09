@@ -23,8 +23,12 @@ async function getJoke() {
   punchline = joke[0].punchline;
   punchlineBtn.classList.toggle("hidden");
   newJokeBtn.classList.toggle("hidden");
+
+  punchlineDiv.innerHTML = "";
+  punchlineDiv.classList.remove("bubble");
 }
 
 getJoke();
 
 punchlineBtn.addEventListener("click", getPunchline);
+newJokeBtn.addEventListener("click", getJoke);
